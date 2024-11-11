@@ -1,12 +1,16 @@
 from django.db import models
+from django.utils import timezone
 import datetime
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=50),
+    name = models.CharField(max_length=50)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = 'Categories'
 
 
 class Customer(models.Model):
@@ -21,10 +25,10 @@ class Customer(models.Model):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=100),
-    price = models.DecimalField(default=0, decimal_places=2, max_digits=6),
+    name = models.CharField(max_length=100, default='blank_name')
+    price = models.DecimalField(default=0, decimal_places=2, max_digits=6)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
-    description = models.CharField(max_length=250, default='', blank=True, null=True),
+    description = models.CharField(max_length=250, default='', blank=True, null=True)
     image = models.ImageField(upload_to='uploads/products/')
 
     def __str__(self):
@@ -37,7 +41,7 @@ class Order(models.Model):
     quantity = models.IntegerField(default=1)
     address = models.CharField(max_length=100, default='', blank=True)
     phone = models.CharField(max_length=20, default='', blank=True)
-    date = models.DateField(default=datetime.datetime.today())
+    date = models.DateField(default=timezone.now)
     status = models.BooleanField(default=False)
 
     def __str__(self):
