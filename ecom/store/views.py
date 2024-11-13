@@ -9,7 +9,7 @@ from .forms import SignUpForm
 
 
 def home_view(request):
-    products = Product.objects.all()
+    products = Product.objects.all().order_by('category')
     context = {'products': products
     }
     return render(request, 'home_view.html', context)
@@ -74,7 +74,7 @@ def category_view(request, foo):
     try:
         category = Category.objects.get(name=foo)
         products = Product.objects.filter(category=category)
-        return render(request,'category.html', {'products': products, 'category': category})
+        return render(request, 'category.html', {'products': products, 'category': category})
     except:
         messages.success(request, 'The category does not exist')
         return redirect('home')
