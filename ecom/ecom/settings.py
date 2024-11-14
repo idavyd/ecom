@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'store'
+    'store',
+    'cart'
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
             'libraries': {
                 'navbar_tags': 'store.templatetags.navbar_tags',
