@@ -16,9 +16,13 @@ def cart_add(request):
         product_id = int(request.POST.get('product_id'))
         product = get_object_or_404(Product,id=product_id)
         cart.db_add(product)
-        response = JsonResponse({'Product_name': product.name})
+        cart_quantity = cart.__len__()
+        #response = JsonResponse({'Product_name': product.name})
+        response = JsonResponse({'cart_quantity': cart_quantity})
+        print('prod added')
         return response
-    return render(request, 'about_view.html', {})
+
+
 
 
 

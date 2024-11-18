@@ -48,7 +48,7 @@ $(document).on('click', '#add-cart', function(e){
         },
 
         success: function(json){
-            document.getElementById("cart_quantity").textContent = json.qty
+            document.getElementById("cart_quantity").textContent = json.cart_quantity
         },
 
         error: function(xhr, errmsg, err){
