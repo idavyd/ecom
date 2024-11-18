@@ -34,26 +34,34 @@
 </div>
 </div>
 
+
 <script>
-     $(document).on('click', '#add-cart', function(e){
-            e.preventDefault();
-            $.ajax({
-                type: 'POST',
-                url: '{% url 'cart_add' %}',
-                data: {
-                       product_id: $(this).val(),
-                       csrfmiddlewaretoken: '{{ csrf_token }}',
-                       action: 'post'
-                },
-                success: function(json){
-                    document.getElementById('cart_q').textContent = json.qty
-                    }
-                error: function(xhr, errmsg, err){
+$(document).on('click', '#add-cart', function(e){
+    e.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: '{% url 'cart_add' %}',
+        data: {
+    product_id: $('#add-cart').val(),
+    csrfmiddlewaretoken: '{{ csrf_token }}',
+    action: 'post'
+        },
 
-                }
-            });
-     })
+        success: function(json){
+            document.getElementById("cart_quantity").textContent = json.qty
+        },
 
+        error: function(xhr, errmsg, err){
+
+        }
+
+
+    });
+
+
+
+})
 </script>
+
 
 {% endblock %}

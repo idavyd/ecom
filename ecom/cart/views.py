@@ -3,6 +3,7 @@ from .cart import Cart
 from store.models import Product
 # from store.models import Product
 from django.http import JsonResponse
+from django.contrib import messages
 
 
 def cart_summary(request):
@@ -11,16 +12,15 @@ def cart_summary(request):
 
 def cart_add(request):
     cart = Cart(request)
-    print(request.POST)
-    # test for POST
     if request.POST.get('action') == 'post':
         product_id = int(request.POST.get('product_id'))
-        product = get_object_or_404(Product, id=product_id)
-        cart.add(product=product)
-        cart_q = cart.__len__()
-        #response = JsonResponse({'Product name': product.name})
-        #response = JsonResponse({'qty': cart_q})
-        return JsonResponse({'Product name': product.name, 'qty': cart_q})
+        product = get_object_or_404(Product,id=product_id)
+        cart.db_add(product)
+        response = JsonResponse({'Product_name': product.name})
+        return response
+    return render(request, 'about_view.html', {})
+
+
 
 
 def cart_delete(request):
