@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Product {{ product.name }}</h1><br/>
+
 <div class="container">
 <div class="card mb-3">
 
@@ -41,11 +41,13 @@
                 type: 'POST',
                 url: '{% url 'cart_add' %}',
                 data: {
-                       product_id: $('#add_cart').val()
+                       product_id: $(this).val(),
                        csrfmiddlewaretoken: '{{ csrf_token }}',
                        action: 'post'
                 },
-                success: function(json){console.log(json)},
+                success: function(json){
+                    document.getElementById('cart_q').textContent = json.qty
+                    }
                 error: function(xhr, errmsg, err){
 
                 }
