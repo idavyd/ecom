@@ -9,8 +9,8 @@ from django.contrib import messages
 def cart_summary(request):
     cart = Cart(request)
     cart_products = cart.get_prods()
-
-    return render(request, 'cart_summary.html', {})
+    context = {'cart_products': cart_products}
+    return render(request, 'cart_summary.html', context)
 
 
 def cart_add(request):
@@ -22,7 +22,7 @@ def cart_add(request):
         cart_quantity = cart.__len__()
         #response = JsonResponse({'Product_name': product.name})
         response = JsonResponse({'cart_quantity': cart_quantity})
-        print('prod added')
+        print('Product added to the cart')
         return response
 
 

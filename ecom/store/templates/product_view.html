@@ -42,7 +42,7 @@ $(document).on('click', '#add-cart', function(e){
         type: 'POST',
         url: '{% url 'cart_add' %}',
         data: {
-    product_id: $('#add-cart').val(),
+    product_id: $(this).val(),
     csrfmiddlewaretoken: '{{ csrf_token }}',
     action: 'post'
         },
