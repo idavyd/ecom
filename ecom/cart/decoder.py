@@ -1,5 +1,5 @@
 from django.contrib.sessions.models import Session
-key = 'ci4p4zx0seiyg5ixgmxbe53gultr0yhj'
-k = Session.objects.get(pk='ci4p4zx0seiyg5ixgmxbe53gultr0yhj')
+key = 't2y8or7eout1znrd9yci1jkn4v47tm1m'
+k = Session.objects.get(pk='t2y8or7eout1znrd9yci1jkn4v47tm1m')
 k.get_decoded()
 

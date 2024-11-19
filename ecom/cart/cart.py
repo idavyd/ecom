@@ -1,3 +1,4 @@
+from store.models import Product
 
 
 class Cart:
@@ -8,7 +9,7 @@ class Cart:
             cart = self.session['cart'] = {}
         self.cart = cart
 
-    def db_add(self, product):
+    def add(self, product):
         product_id = str(product.id)
 
         if product_id in self.cart:
@@ -20,6 +21,12 @@ class Cart:
 
     def __len__(self):
         return len(self.cart)
+
+    def get_prods(self):
+        product_ids = self.cart.keys()
+        products = Product.objects.filder(id_in=product_ids)
+
+        return products
 
 
 

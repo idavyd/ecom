@@ -7,6 +7,9 @@ from django.contrib import messages
 
 
 def cart_summary(request):
+    cart = Cart(request)
+    cart_products = cart.get_prods()
+
     return render(request, 'cart_summary.html', {})
 
 
@@ -14,8 +17,8 @@ def cart_add(request):
     cart = Cart(request)
     if request.POST.get('action') == 'post':
         product_id = int(request.POST.get('product_id'))
-        product = get_object_or_404(Product,id=product_id)
-        cart.db_add(product)
+        product = get_object_or_404(Product, id=product_id)
+        cart.add(product)
         cart_quantity = cart.__len__()
         #response = JsonResponse({'Product_name': product.name})
         response = JsonResponse({'cart_quantity': cart_quantity})
