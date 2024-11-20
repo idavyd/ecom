@@ -1,24 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block content %}
+<!-- Header -->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Cart Summary</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Your selected products</p>
+        </div>
+    </div>
+</header>
 
-        {% block content %}
-
-        <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shoping Cart</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Do your groceties</p>
+<!-- Cart Summary -->
+<div class="container py-5">
+    {% if cart_products.exists %}
+        <div class="row g-4">
+            {% for product in cart_products %}
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <!-- Product Image -->
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <!-- Product Name -->
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <!-- Product Description -->
+                        <p class="card-text text-muted">{{ product.description|truncatechars:100 }}</p>
+                        <!-- Product Price -->
+                        <h6 class="text-success">Price: ${{ product.price }}</h6>
+                    </div>
                 </div>
             </div>
-        </header>
-        test
-        <br/><br/>
-        <br/><br/>
-        <br/><br/>
-
-
-    {% endblock %}
-
-
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="text-center py-5">
+            <h3>Your cart is empty!</h3>
+            <p class="text-muted">Browse our store and add some items to your cart.</p>
+            <a href="{% url 'product_list' %}" class="btn btn-primary">Shop Now</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
