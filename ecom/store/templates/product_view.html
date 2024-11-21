@@ -3,64 +3,81 @@
 {% block content %}
 
 <div class="container">
-<div class="card mb-3">
+    <div class="card mb-3">
 
-  <div class="row g-0">
-        <div class="col-md-4">
-      <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="...">
-        </div>
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="...">
+            </div>
 
-    <div class="col-md-8">
-        <div class="card-body">
-            <center>
-            <h5 class="card-title">{{ product.name }}</h5>
-            <p class="card-text">{{ product.description }}</p>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <center>
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
 
-            {% if product.is_sale %}
-                <strike>${{ product.price }}</strike>&nbsp;${{ product.sale_price }}
-            {% else %}
+                        {% if product.is_sale %}
+                        <strike>${{ product.price }}</strike>&nbsp;${{ product.sale_price }}
+                        {% else %}
                         ${{ product.price }}
-            {% endif %}
-            </center>
-            <div class="spacer" style="height: 15px;"></div> <!-- Spacer to adjust button position -->
-        <center>
-            <button type="button" value="{{ product.id }}" class="btn btn-secondary" id="add-cart">Add To Cart</button>
-        </center>
+                        {% endif %}
+                    </center>
+                    <br/>
+                    <div class="row justify-content-center">
+                        <div class="col-md-2">Quantity:</div>
+                        <div class="col-md-2">
+                            <select class="form-select form-select-sm" id="quantity_cart">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="spacer" style="height: 15px;"></div> <!-- Spacer to adjust button position -->
+                    <center>
+                        <button type="button" value="{{ product.id }}" class="btn btn-secondary" id="add-cart">Add To
+                            Cart
+                        </button>
+                    </center>
+                </div>
+
+            </div>
+
         </div>
-
     </div>
-
-  </div>
-</div>
 </div>
 
 
 <script>
-$(document).on('click', '#add-cart', function(e){
-    e.preventDefault();
-    $.ajax({
-        type: 'POST',
-        url: '{% url 'cart_add' %}',
-        data: {
-    product_id: $(this).val(),
-    csrfmiddlewaretoken: '{{ csrf_token }}',
-    action: 'post'
-        },
+    $(document).on('click', '#add-cart', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '{% url 'cart_add' %}',
+            data: {
+        product_id: $(this).val(),
+        product_quantity: $('#quantity_cart option:selected').text(),
+        csrfmiddlewaretoken: '{{ csrf_token }}',
+        action: 'post'
+            },
 
-        success: function(json){
-            document.getElementById('cart_quantity').textContent = json.cart_quantity
-        },
+            success: function(json){
+                document.getElementById('cart_quantity').textContent = json.cart_quantity
+            },
 
-        error: function(xhr, errmsg, err){
+            error: function(xhr, errmsg, err){
 
-        }
-
-
-    });
+            }
 
 
+        });
 
-})
+
+
+    })
 </script>
 
 

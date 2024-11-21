@@ -9,7 +9,9 @@ from django.contrib import messages
 def cart_summary(request):
     cart = Cart(request)
     cart_products = cart.get_prods()
-    context = {'cart_products': cart_products}
+    quantities = cart.get_quants()
+    context = {'cart_products': cart_products,
+               'quantities': quantities}
     return render(request, 'cart_summary.html', context)
 
 
@@ -17,8 +19,9 @@ def cart_add(request):
     cart = Cart(request)
     if request.POST.get('action') == 'post':
         product_id = int(request.POST.get('product_id'))
+        number_of_prod_in_cart = int(request.POST.get('product_quantity'))
         product = get_object_or_404(Product, id=product_id)
-        cart.add(product)
+        cart.add(product, number_of_prod_in_cart)
         cart_quantity = cart.__len__()
         #response = JsonResponse({'Product_name': product.name})
         response = JsonResponse({'cart_quantity': cart_quantity})
