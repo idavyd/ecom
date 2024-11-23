@@ -5,6 +5,7 @@ import datetime
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='uploads/categories/', null=True)
 
     def __str__(self):
         return self.name

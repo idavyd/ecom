@@ -80,11 +80,8 @@ def category_view(request, foo):
         return redirect('home')
 
 
-
-
-
-
-
-
-
-
+def category_summary(request):
+    categories = Category.objects.all()
+    context = {'categories': categories
+    }
+    return render(request, 'category_summary.html', context)
