@@ -40,11 +40,11 @@
                             <label for="quantity_cart" class="me-2 mb-0">Qty:</label>
                             <select class="form-select form-select-sm" id="select{{product.id}}">
 
-                                    {% for key, value in quantities.items %}
-                                        {% if key == product.id|slugify %}
-                                            <option selected>{{ value }}</option>
-                                        {% endif %}
-                                    {% endfor %}
+                                {% for key, value in quantities.items %}
+                                {% if key == product.id|slugify %}
+                                <option selected>{{ value }}</option>
+                                {% endif %}
+                                {% endfor %}
 
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -55,6 +55,9 @@
                         </div>
                         <button type="button" data-index="{{ product.id }}"
                                 class="btn btn-secondary update-cart">Update
+                        </button>
+                        <button type="button" data-index="{{ product.id }}"
+                                class="btn btn-danger delete-product">Remove
                         </button>
                     </div>
                 </div>
@@ -89,6 +92,34 @@
 
             success: function(json){
                 document.getElementById('cart_quantity').textContent = json.cart_quantity
+                location.reload();
+            },
+
+            error: function(xhr, errmsg, err){
+
+            }
+
+
+        });
+
+
+
+    })
+
+        $(document).on('click', '.delete-product', function(e){
+        e.preventDefault();
+
+        $.ajax({
+            type: 'POST',
+            url: '{% url 'cart_delete' %}',
+            data: {
+        product_id: $(this).data('index'),
+        csrfmiddlewaretoken: '{{ csrf_token }}',
+        action: 'post'
+            },
+
+            success: function(json){
+                location.reload();
             },
 
             error: function(xhr, errmsg, err){

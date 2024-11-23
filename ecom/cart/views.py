@@ -29,7 +29,15 @@ def cart_add(request):
         return response
 
 
-def cart_delete(request):
+def delete(request):
+    cart = Cart(request)
+    if request.POST.get('action') == 'post':
+        product_id = int(request.POST.get('product_id'))
+        product = get_object_or_404(Product, id=product_id)
+        cart.remove(product=product)
+
+
+
     return render(request, 'about_view.html', {})
 
 

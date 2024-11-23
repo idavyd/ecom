@@ -41,6 +41,11 @@ class Cart:
 
         return our_cart
 
+    def remove(self, product):
+        product_id = str(product.id)
+        self.cart.pop(product_id)
+        self.session.modified = True
+
 
 
 
