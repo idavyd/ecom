@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from .forms import SignUpForm, UpdateUserForm
+from .forms import SignUpForm, UpdateUserForm, ChangePasswordForm
 
 
 def home_view(request):
@@ -89,7 +89,6 @@ def category_summary(request):
 
 def update_user(request):
     if request.user.is_authenticated:
-        current_user = User.objects.get(id=request.user.id)
         form = UpdateUserForm(request.POST or None, instance=request.user)
         if form.is_valid():
             form.save()
@@ -100,3 +99,25 @@ def update_user(request):
     else:
         messages.success(request, 'YOu must be logged in to access that page')
         return redirect('home')
+
+
+def update_password(request):
+    if request.user.is_authenticated:
+        password_form = ChangePasswordForm(user=request.user)
+        if request.method == 'POST':
+            password_form = ChangePasswordForm(request.user, request.POST)
+            if password_form.is_valid():
+                password_form.save()
+                messages.success(request, 'Password has been updated')
+                return redirect('update_user')
+            else:
+                for err in list(password_form.errors.values()):
+                    messages.error(request, err)
+                    return redirect('update_password')
+        else:
+            return render(request, 'update_password.html', {'password_form': password_form})
+    else:
+        messages.success(request, 'YOu must be logged in to access that page')
+        return redirect('home')
+
+
