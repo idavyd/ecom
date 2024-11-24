@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from .forms import SignUpForm
+from .forms import SignUpForm, UpdateUserForm
 
 
 def home_view(request):
@@ -85,3 +85,18 @@ def category_summary(request):
     context = {'categories': categories
     }
     return render(request, 'category_summary.html', context)
+
+
+def update_user(request):
+    if request.user.is_authenticated:
+        current_user = User.objects.get(id=request.user.id)
+        form = UpdateUserForm(request.POST or None, instance=request.user)
+        if form.is_valid():
+            form.save()
+            login(request, request.user)
+            messages.success(request, 'Сосать хуй!')
+            return redirect('home')
+        return render(request, 'update_user.html', {'form': form})
+    else:
+        messages.success(request, 'YOu must be logged in to access that page')
+        return redirect('home')
