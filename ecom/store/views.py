@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect
-from .models import Product, Category
+from .models import Product, Category, Profile
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
-from .forms import SignUpForm, UpdateUserForm, ChangePasswordForm
+from .forms import SignUpForm, UpdateUserForm, ChangePasswordForm, UserInfoForm
 
 
 def home_view(request):
@@ -41,6 +41,12 @@ def logout_view(request):
     return redirect('home')
 
 
+def product_view(request, pk):
+    product = Product.objects.get(id=pk)
+    context = {'product': product}
+    return render(request, 'product_view.html', context)
+
+
 def register_view(request):
     form = SignUpForm()
     context = {'form': form
@@ -54,19 +60,13 @@ def register_view(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
-            messages.success(request, 'You have been registered')
-            return redirect('home')
+            messages.success(request, 'Username created. Please fill out your billing info')
+            return redirect('update_info')
         else:
             messages.success(request, 'Error. Please try again')
             return redirect('register')
     else:
         return render(request, 'register_view.html', context)
-
-
-def product_view(request, pk):
-    product = Product.objects.get(id=pk)
-    context = {'product': product}
-    return render(request, 'product_view.html', context)
 
 
 def category_view(request, foo):
@@ -119,5 +119,20 @@ def update_password(request):
     else:
         messages.success(request, 'YOu must be logged in to access that page')
         return redirect('home')
+
+
+def update_info(request):
+    if request.user.is_authenticated:
+        profile_needed = Profile.objects.get(user__id=request.user.id)
+        form = UserInfoForm(request.POST or None, instance=profile_needed)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Info has been update!')
+            return redirect('home')
+        return render(request, 'update_info.html', {'form': form})
+    else:
+        messages.success(request, 'YOu must be logged in to access that page')
+        return redirect('home')
+
 
 
