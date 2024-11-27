@@ -9,6 +9,8 @@ from .forms import SignUpForm, UpdateUserForm, ChangePasswordForm, UserInfoForm
 from django.db.models import Q
 import json
 from cart.cart import Cart
+from payment.forms import ShippingForm
+from payment.models import ShippingAddress
 
 def home_view(request):
     products = Product.objects.all().order_by('category')
@@ -136,12 +138,15 @@ def update_password(request):
 def update_info(request):
     if request.user.is_authenticated:
         profile_needed = Profile.objects.get(user__id=request.user.id)
+        s_user = ShippingAddress.objects.get(user__id=request.user.id)
         form = UserInfoForm(request.POST or None, instance=profile_needed)
-        if form.is_valid():
+        s_form = ShippingForm(request.POST or None, instance=s_user)
+        if form.is_valid() or s_form.is_valid():
             form.save()
-            messages.success(request, 'Info has been update!')
+            s_form.save()
+            messages.success(request, 'Info has been updated')
             return redirect('home')
-        return render(request, 'update_info.html', {'form': form})
+        return render(request, 'update_info.html', {'form': form, 's_form': s_form})
     else:
         messages.success(request, 'YOu must be logged in to access that page')
         return redirect('home')
