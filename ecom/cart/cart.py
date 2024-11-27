@@ -45,13 +45,22 @@ class Cart:
         our_cart = self.cart
         our_cart[product_id] = product_quantity
         self.session.modified = True
-
+        if self.request.user.is_authenticated:
+            profile = Profile.objects.filter(user__id=self.request.user.id)
+            cart_str = str(self.cart)
+            cart_str = cart_str.replace("\'", '\"')
+            profile.update(old_cart=cart_str)
         return our_cart
 
     def remove(self, product):
         product_id = str(product.id)
         self.cart.pop(product_id)
         self.session.modified = True
+        if self.request.user.is_authenticated:
+            profile = Profile.objects.filter(user__id=self.request.user.id)
+            cart_str = str(self.cart)
+            cart_str = cart_str.replace("\'", '\"')
+            profile.update(old_cart=cart_str)
 
     def total(self):
         totals_per_prod = []
@@ -64,6 +73,22 @@ class Cart:
                 x = product.price * value
                 totals_per_prod.append(x)
         return sum(totals_per_prod)
+
+    def db_add(self, product, quantity):
+        product_id = str(product)
+        product_quantity = quantity
+        if product_id in self.cart:
+            pass
+        else:
+            self.cart[product_id] = int(product_quantity)
+
+        self.session.modified = True
+
+        if self.request.user.is_authenticated:
+            profile = Profile.objects.filter(user__id=self.request.user.id)
+            cart_str = str(self.cart)
+            cart_str = cart_str.replace("\'", '\"')
+            profile.update(old_cart=cart_str)
 
 
 
