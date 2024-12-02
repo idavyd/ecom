@@ -6,8 +6,8 @@
 <header class="bg-dark py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">Checkout</h1>
-            <p class="lead fw-normal text-white-50 mb-0">Review Your Order</p>
+            <h1 class="display-4 fw-bolder">Billing Info</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Gimme your money</p>
         </div>
     </div>
 </header>
@@ -41,8 +41,6 @@
 
                     <hr class="divider"/>
                     <strong>Total: ${{ total }}</strong>
-                    <br/><br/>
-                    <a href="{% url 'cart_summary' %}" class="btn btn-sm btn-outline-secondary">Update Items</a>
                 </div>
             </div>
             <br/><br/>
@@ -51,14 +49,27 @@
                     Shipping Info
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{% url 'billing_info'%}">
-                        {% csrf_token %}
-                        {{ s_form.as_p}}
-                        <center><button type="submit" class="btn btn-secondary">To Billing</button></center>
-                        </form>
+                    <strong>Name:</strong> | {{ s_info.shipping_full_name }} |<br>
+                    <strong>Address:</strong> {{ s_info.shipping_address1 }}<br>
+                    <strong>State:</strong> {{ s_info.shipping_state }}<br>
+                    <strong>Zip Code:</strong> {{ s_info.shipping_zipcode }}<br>
+                    <strong>Country:</strong> {{ s_info.shipping_country }}<br>
                 </div>
             </div>
             <br/>
+            <div class="card">
+                <div class="card-header">
+                    Billing Info
+                </div>
+                <div class="card-body">
+                    {{ billing_form.as_p }}
+                </div>
+            </div>
+            <br/>
+
+            <center><a href="#" class="btn btn-secondary">Proceed to Payment</a></center>
+            <br/>
+
 
         </div>
     </div>
