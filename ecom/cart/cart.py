@@ -90,6 +90,9 @@ class Cart:
             cart_str = cart_str.replace("\'", '\"')
             profile.update(old_cart=cart_str)
 
+    def clear(self):
+        self.cart = self.session['cart'] = {}
+
 
 
 
