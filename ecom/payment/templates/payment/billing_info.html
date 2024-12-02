@@ -7,7 +7,7 @@
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">Billing Info</h1>
-            <p class="lead fw-normal text-white-50 mb-0">Gimme your money</p>
+            <p class="lead fw-normal text-white-50 mb-0">You waste your money here</p>
         </div>
     </div>
 </header>
@@ -43,13 +43,13 @@
                     <strong>Total: ${{ total }}</strong>
                 </div>
             </div>
-            <br/><br/>
+            <br/>
             <div class="card">
                 <div class="card-header">
                     Shipping Info
                 </div>
                 <div class="card-body">
-                    <strong>Name:</strong> | {{ s_info.shipping_full_name }} |<br>
+                    <strong>Name:</strong> {{ s_info.shipping_full_name }} <br>
                     <strong>Address:</strong> {{ s_info.shipping_address1 }}<br>
                     <strong>State:</strong> {{ s_info.shipping_state }}<br>
                     <strong>Zip Code:</strong> {{ s_info.shipping_zipcode }}<br>

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from cart.cart import Cart
-from payment.forms import ShippingForm, PaymentForm
-from payment.models import ShippingAddress
+from .forms import ShippingForm, PaymentForm
+from .models import ShippingAddress
 from django.contrib import messages
 from django.shortcuts import redirect, render
 
@@ -40,8 +40,6 @@ def billing_info(request):
         cart_products = cart.get_prods()
         quantities = cart.get_quants()
         total = cart.total()
-        s_user = ShippingAddress.objects.get(user__id=request.user.id)
-        s_info = ShippingForm(request.POST or None, instance=s_user)
         billing_form = PaymentForm()
         context = {'cart_products': cart_products,
                    'quantities': quantities,
