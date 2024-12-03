@@ -148,5 +148,11 @@ def not_shipped_dash(request):
         return redirect('home')
 
 
+def orders(request, pk):
+    if request.user.is_authenticated and request.user.is_superuser:
+
+    order = Order.objects.get(pk=pk)
+
+
 
 
