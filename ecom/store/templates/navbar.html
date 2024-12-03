@@ -42,6 +42,10 @@
                         <li><a class="dropdown-item" href="{% url 'category' 'Cars' %}">Cars</a></li>
                     </ul>
                 </li>
+                {% if user.is_authenticated and user.is_superuser %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'shipped_dash' %}">Shipping Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'not_shipped_dash' %}">non Shipping Dashboard</a></li>
+                {% endif %}
             </ul>
 
             <!-- Cart -->
