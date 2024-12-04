@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import redirect, render
 from store.models import Product
+import datetime as dt
 
 
 def payment_success(request):
@@ -130,6 +131,12 @@ def process_order(request):
 
 def shipped_dash(request):
     if request.user.is_authenticated and request.user.is_superuser:
+        if request.POST:
+            num = request.POST['num']
+            order = Order.objects.filter(id=num)
+            order.update(is_shipped=False, date_shipped=None)
+            messages.success(request, 'Marked as unshipped')
+            return redirect('unshipped_dash')
         orders = Order.objects.filter(is_shipped=True)
         context = {'orders': orders}
         return render(request, 'payment/shipped_dash.html', context)
@@ -141,6 +148,12 @@ def shipped_dash(request):
 def not_shipped_dash(request):
     if request.user.is_authenticated and request.user.is_superuser:
         orders = Order.objects.filter(is_shipped=False)
+        if request.POST:
+            num = request.POST['num']
+            order = Order.objects.filter(id=num)
+            order.update(is_shipped=True, date_shipped=dt.datetime.now())
+            messages.success(request, 'Marked as shipped')
+            return redirect('shipped_dash')
         context = {'orders': orders}
         return render(request, 'payment/not_shipped_dash.html', context)
     else:
@@ -152,6 +165,18 @@ def orders(request, pk):
     if request.user.is_authenticated and request.user.is_superuser:
         order = Order.objects.get(id=pk)
         items = OrderItem.objects.filter(order=pk)
+        if request.POST:
+            status = request.POST['shipping_status']
+            if status == 'true':
+                order = Order.objects.filter(id=pk)
+                order.update(is_shipped=True, date_shipped=dt.datetime.now())
+                messages.success(request, 'Marked as shipped')
+                return redirect('shipped_dash')
+            else:
+                order = Order.objects.filter(id=pk)
+                order.update(is_shipped=False, date_shipped=None)
+                messages.success(request, 'Marked as unshipped')
+                return redirect('not_shipped_dash')
         context = {'order': order,
                    'items': items}
         return render(request, 'payment/orders.html', context)

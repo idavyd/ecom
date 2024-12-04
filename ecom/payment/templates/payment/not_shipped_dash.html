@@ -13,6 +13,7 @@
                         <th scope="col">Price</th>
                         <th scope="col">Customer email</th>
                         <th scope="col">Date Ordered</th>
+                        <th scope="col">Shipping status</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -22,6 +23,15 @@
                         <td>${{ order.amount_paid}}</td>
                         <td>{{ order.email}}</td>
                         <td>{{ order.date_ordered }}</td>
+                        <td><form method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="shipping_status" value="true">
+                            <input type="hidden" name="num" value="{{ order.id }}">
+                            <button type="submit" class="btn btn-success btn-sm">Mark as Shipped</button>
+
+
+
+                        </form></td>
                     </tr>
                     {% endfor %}
 

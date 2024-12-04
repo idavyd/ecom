@@ -12,9 +12,9 @@
                 <div class="card-body">
                     <p><strong>Email:</strong> {{ order.email }}</p>
                     {% if order.is_shipped %}
-                        <p><strong>Date Shipped:</strong> {{ order.date_shipped }}</p>
+                    <p><strong>Date Shipped:</strong> {{ order.date_shipped }}</p>
                     {% else %}
-                        <p><strong>Date Ordered:</strong> {{ order.date_ordered }}</p>
+                    <p><strong>Date Ordered:</strong> {{ order.date_ordered }}</p>
                     {% endif %}
                     <p><strong>Full Name:</strong> {{ order.full_name }}</p>
                     <p><strong>Shipping Address:</strong> {{ order.shipping_address }}</p>
@@ -22,11 +22,22 @@
                     <h5 class="mb-3">Items:</h5>
                     <ul class="list-group">
                         {% for i in items %}
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                <span>{{ i.product }} (x{{ i.quantity }})</span>
-                                <span>${{ i.price }}</span>
-                            </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>{{ i.product }} (x{{ i.quantity }})</span>
+                            <span>${{ i.price }}</span>
+                        </li>
+                        <br/>
                         {% endfor %}
+                        <form method="post">
+                            {% csrf_token %}
+                            {% if not order.is_shipped %}
+                            <input type="hidden" name="shipping_status" value="true">
+                            <button type="submit" class="btn btn-success">Mark as Shipped</button>
+                            {% else %}
+                            <input type="hidden" name="shipping_status" value="false">
+                            <button type="submit" class="btn btn-danger">Mark as Unshipped</button>
+                            {% endif %}
+                        </form>
                     </ul>
                 </div>
             </div>
