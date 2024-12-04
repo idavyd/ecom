@@ -73,10 +73,10 @@ def process_order(request):
 
         if request.user.is_authenticated:
             new_order = Order(user=request.user,
-                                 full_name=my_shipping['shipping_full_name'],
-                                 email=my_shipping['shipping_email'],
-                                 amount_paid=cart.total(),
-                                 shipping_address=shipping_address)
+                              full_name=my_shipping['shipping_full_name'],
+                              email=my_shipping['shipping_email'],
+                              amount_paid=cart.total(),
+                              shipping_address=shipping_address)
             new_order.save()
             order_id = new_order.pk
             for product in cart.get_prods():
@@ -99,10 +99,10 @@ def process_order(request):
             return redirect('home')
         else:
             new_order = Order(
-                                 full_name=my_shipping['shipping_full_name'],
-                                 email=my_shipping["shipping_email"],
-                                 amount_paid=cart.total(),
-                                 shipping_address=shipping_address)
+                full_name=my_shipping['shipping_full_name'],
+                email=my_shipping["shipping_email"],
+                amount_paid=cart.total(),
+                shipping_address=shipping_address)
             new_order.save()
             order_id = new_order.pk
 
@@ -150,9 +150,12 @@ def not_shipped_dash(request):
 
 def orders(request, pk):
     if request.user.is_authenticated and request.user.is_superuser:
+        order = Order.objects.get(id=pk)
+        items = OrderItem.objects.filter(order=pk)
+        context = {'order': order,
+                   'items': items}
+        return render(request, 'payment/orders.html', context)
 
-    order = Order.objects.get(pk=pk)
-
-
-
-
+    else:
+        messages.success(request, 'Access Denied')
+        return redirect('home')
