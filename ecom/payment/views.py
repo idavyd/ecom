@@ -5,8 +5,9 @@ from .models import ShippingAddress, Order, OrderItem
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import redirect, render
-from store.models import Product
+from store.models import Product, Profile
 import datetime as dt
+
 
 
 def payment_success(request):
@@ -96,6 +97,8 @@ def process_order(request):
                                                       price=price)
                         create_order_item.save()
             cart.clear()
+            current_user = Profile.objects.filter(user__id=request.user.id)
+            current_user.update(old_cart='')
             messages.success(request, 'Order Placed!')
             return redirect('home')
         else:
