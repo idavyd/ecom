@@ -15,8 +15,8 @@ SECRET_KEY = 'django-insecure-w+382ahc&%=c%)6m-%2vc$if!(0h6aqypv37agqyr@0x40)8d2
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['ecom-production-e248.up.railway.app', 'https://ecom-production-e248.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://ecom-production-e248.up.railway.app']
+ALLOWED_HOSTS = ['ecom-production-dfb1.up.railway.app', 'https://ecom-production-dfb1.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://ecom-production-dfb1.up.railway.app']
 
 # Application definition
 
@@ -42,7 +42,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    ''
 ]
 
 ROOT_URLCONF = 'ecom.urls'
