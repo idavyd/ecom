@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -15,8 +14,10 @@ SECRET_KEY = 'django-insecure-w+382ahc&%=c%)6m-%2vc$if!(0h6aqypv37agqyr@0x40)8d2
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ecom-production-dfb1.up.railway.app']
 CSRF_TRUSTED_ORIGINS = ['https://ecom-production-dfb1.up.railway.app']
+
+
 
 # Application definition
 

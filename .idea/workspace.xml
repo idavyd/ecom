@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4fc743b6-d872-4306-ad33-1c3280e9426c" name="Changes" comment="EP 44 P14">
+      <change beforePath="$PROJECT_DIR$/ecom/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/ecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/ecom/settings.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2ofk4JZjecXyigkqNoKh89JR3oD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\digor\PycharmProjects\ecom\ecom" />
+      <recent name="C:\Users\digor\PycharmProjects\ecom" />
+      <recent name="C:\Users\digor\PycharmProjects\ecom\ecom\payment\templates\payment" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fc743b6-d872-4306-ad33-1c3280e9426c" name="Changes" comment="" />
+      <created>1731267825052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731267825052</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ECOM 11/11 episode #2">
+      <option name="closed" value="true" />
+      <created>1731304190745</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731304190745</updated>
+    </task>
+    <task id="LOCAL-00006" summary="EP 7 11/12 morning session">
+      <option name="closed" value="true" />
+      <created>1731390796694</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731390796694</updated>
+    </task>
+    <task id="LOCAL-00007" summary="EP 9 13/12 morning session">
+      <option name="closed" value="true" />
+      <created>1731482977178</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731482977178</updated>
+    </task>
+    <task id="LOCAL-00008" summary="EP 12 14/11 morning session">
+      <option name="closed" value="true" />
+      <created>1731563470528</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1731563470528</updated>
+    </task>
+    <task id="LOCAL-00009" summary="EP 14 18/11 morning session">
+      <option name="closed" value="true" />
+      <created>1731909105311</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731909105311</updated>
+    </task>
+    <task id="LOCAL-00010" summary="EP 15 19/11 morning session">
+      <option name="closed" value="true" />
+      <created>1731994969000</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731994969001</updated>
+    </task>
+    <task id="LOCAL-00011" summary="EP 15 20/11 morning session">
+      <option name="closed" value="true" />
+      <created>1732086397717</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732086397717</updated>
+    </task>
+    <task id="LOCAL-00012" summary="EP 16 21/11 morning session">
+      <option name="closed" value="true" />
+      <created>1732172543619</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732172543619</updated>
+    </task>
+    <task id="LOCAL-00013" summary="EP 18 delete button in cart 23/11 home">
+      <option name="closed" value="true" />
+      <created>1732368674520</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732368674520</updated>
+    </task>
+    <task id="LOCAL-00014" summary="EP 19 Total number in cart 23/11 home">
+      <option name="closed" value="true" />
+      <created>1732380561281</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732380561281</updated>
+    </task>
+    <task id="LOCAL-00015" summary="EP 20 all products pagge 23/11 home">
+      <option name="closed" value="true" />
+      <created>1732389710095</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732389710095</updated>
+    </task>
+    <task id="LOCAL-00016" summary="EP 21 success message 23/11 home">
+      <option name="closed" value="true" />
+      <created>1732390285441</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732390285441</updated>
+    </task>
+    <task id="LOCAL-00017" summary="EP 22 update profile 23/11 home">
+      <option name="closed" value="true" />
+      <created>1732436169463</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732436169463</updated>
+    </task>
+    <task id="LOCAL-00018" summary="EP 22 update profile 23/11 home">
+      <option name="closed" value="true" />
+      <created>1732437199087</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732437199087</updated>
+    </task>
+    <task id="LOCAL-00019" summary="EP 23 password change form 24/11 home">
+      <option name="closed" value="true" />
+      <created>1732460236732</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732460236732</updated>
+    </task>
+    <task id="LOCAL-00020" summary="EP 24 create Profile  24/11 home">
+      <option name="closed" value="true" />
+      <created>1732463162749</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732463162749</updated>
+    </task>
+    <task id="LOCAL-00021" summary="EP 25 User profile page 25/11 home">
+      <option name="closed" value="true" />
+      <created>1732569786325</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1732569786325</updated>
+    </task>
+    <task id="LOCAL-00022" summary="EP 26 Search function 26/11 home">
+      <option name="closed" value="true" />
+      <created>1732599553696</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1732599553696</updated>
+    </task>
+    <task id="LOCAL-00023" summary="EP 27 Cart finished  27/11 home">
+      <option name="closed" value="true" />
+      <created>1732685167876</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732685167876</updated>
+    </task>
+    <task id="LOCAL-00024" summary="EP 29 new app  27/11 home">
+      <option name="closed" value="true" />
+      <created>1732686428294</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732686428294</updated>
+    </task>
+    <task id="LOCAL-00025" summary="EP 29 new app  27/11 home">
+      <option name="closed" value="true" />
+      <created>1732687090489</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1732687090489</updated>
+    </task>
+    <task id="LOCAL-00026" summary="EP 34 Billing info  02/12 home">
+      <option name="closed" value="true" />
+      <created>1733163051097</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733163051098</updated>
+    </task>
+    <task id="LOCAL-00027" summary="EP 35 Generate Orders  02/12 home">
+      <option name="closed" value="true" />
+      <created>1733166460537</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733166460537</updated>
+    </task>
+    <task id="LOCAL-00028" summary="EP 36 Attach Order Items  02/12 home">
+      <option name="closed" value="true" />
+      <created>1733168664946</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1733168664946</updated>
+    </task>
+    <task id="LOCAL-00029" summary="EP 37 Order Item Inlines  02/12 home">
+      <option name="closed" value="true" />
+      <created>1733173597433</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1733173597433</updated>
+    </task>
+    <task id="LOCAL-00030" summary="EP 38 Shipping Date  02/12 home">
+      <option name="closed" value="true" />
+      <created>1733174607012</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1733174607012</updated>
+    </task>
+    <task id="LOCAL-00031" summary="EP 40 Dashboard Item Pages  04/12 home">
+      <option name="closed" value="true" />
+      <created>1733289612123</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1733289612123</updated>
+    </task>
+    <task id="LOCAL-00032" summary="EP 41 Shipped buttons   04/12 home">
+      <option name="closed" value="true" />
+      <created>1733292260487</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733292260487</updated>
+    </task>
+    <task id="LOCAL-00033" summary="EP 42 cart clearance   04/12 home">
+      <option name="closed" value="true" />
+      <created>1733295288721</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1733295288721</updated>
+    </task>
+    <task id="LOCAL-00034" summary="EP 43 data migration   04/12 home">
+      <option name="closed" value="true" />
+      <created>1733297015713</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733297015713</updated>
+    </task>
+    <task id="LOCAL-00035" summary="EP 43 data migration pt 2  08/12 home">
+      <option name="closed" value="true" />
+      <created>1733666311545</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1733666311545</updated>
+    </task>
+    <task id="LOCAL-00036" summary="EP 44 push our app to web hosting  08/12 home">
+      <option name="closed" value="true" />
+      <created>1733674119019</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1733674119019</updated>
+    </task>
+    <task id="LOCAL-00037" summary="EP 44 push our app to web hosting  08/12 home">
+      <option name="closed" value="true" />
+      <created>1733674693624</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1733674693624</updated>
+    </task>
+    <task id="LOCAL-00038" summary="EP 44 push our app to web hosting  08/12 home">
+      <option name="closed" value="true" />
+      <created>1733674785792</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1733674785792</updated>
+    </task>
+    <task id="LOCAL-00039" summary="EP 44 push our app to web hosting  08/12 home">
+      <option name="closed" value="true" />
+      <created>1733675431783</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733675431783</updated>
+    </task>
+    <task id="LOCAL-00040" summary="EP 44 P3">
+      <option name="closed" value="true" />
+      <created>1733675681309</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1733675681309</updated>
+    </task>
+    <task id="LOCAL-00041" summary="EP 44 P4">
+      <option name="closed" value="true" />
+      <created>1733675912974</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1733675912974</updated>
+    </task>
+    <task id="LOCAL-00042" summary="EP 44 P4">
+      <option name="closed" value="true" />
+      <created>1733676538374</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1733676538374</updated>
+    </task>
+    <task id="LOCAL-00043" summary="EP 44 P4">
+      <option name="closed" value="true" />
+      <created>1733676838218</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1733676838218</updated>
+    </task>
+    <task id="LOCAL-00044" summary="EP 44 P6">
+      <option name="closed" value="true" />
+      <created>1733677032309</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1733677032309</updated>
+    </task>
+    <task id="LOCAL-00045" summary="EP 44 P7">
+      <option name="closed" value="true" />
+      <created>1733677424107</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1733677424107</updated>
+    </task>
+    <task id="LOCAL-00046" summary="EP 44 P7">
+      <option name="closed" value="true" />
+      <created>1733677538170</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1733677538170</updated>
+    </task>
+    <task id="LOCAL-00047" summary="EP 44 P8">
+      <option name="closed" value="true" />
+      <created>1733677589184</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1733677589184</updated>
+    </task>
+    <task id="LOCAL-00048" summary="EP 44 P9">
+      <option name="closed" value="true" />
+      <created>1733677655238</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1733677655238</updated>
+    </task>
+    <task id="LOCAL-00049" summary="EP 44 P10">
+      <option name="closed" value="true" />
+      <created>1733678042715</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1733678042715</updated>
+    </task>
+    <task id="LOCAL-00050" summary="EP 44 P11">
+      <option name="closed" value="true" />
+      <created>1733678539778</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1733678539778</updated>
+    </task>
+    <task id="LOCAL-00051" summary="EP 44 P12">
+      <option name="closed" value="true" />
+      <created>1733678733384</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1733678733384</updated>
+    </task>
+    <task id="LOCAL-00052" summary="EP 44 P13">
+      <option name="closed" value="true" />
+      <created>1733679220518</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1733679220518</updated>
+    </task>
+    <task id="LOCAL-00053" summary="EP 44 P14">
+      <option name="closed" value="true" />
+      <created>1733682017330</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1733682017331</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="EP 26 Search function 26/11 home" />
+    <MESSAGE value="EP 27 Cart finished  27/11 home" />
+    <MESSAGE value="EP 29 new app  27/11 home" />
+    <MESSAGE value="EP 34 Billing info  02/12 home" />
+    <MESSAGE value="EP 35 Generate Orders  02/12 home" />
+    <MESSAGE value="EP 36 Attach Order Items  02/12 home" />
+    <MESSAGE value="EP 37 Order Item Inlines  02/12 home" />
+    <MESSAGE value="EP 38 Shipping Date  02/12 home" />
+    <MESSAGE value="EP 40 Dashboard Item Pages  04/12 home" />
+    <MESSAGE value="EP 41 Shipped buttons   04/12 home" />
+    <MESSAGE value="EP 42 cart clearance   04/12 home" />
+    <MESSAGE value="EP 43 data migration   04/12 home" />
+    <MESSAGE value="EP 43 data migration pt 2  08/12 home" />
+    <MESSAGE value="EP 44 push our app to web hosting  08/12 home" />
+    <MESSAGE value="EP 44 P3" />
+    <MESSAGE value="EP 44 P4" />
+    <MESSAGE value="EP 44 P6" />
+    <MESSAGE value="EP 44 P7" />
+    <MESSAGE value="EP 44 P8" />
+    <MESSAGE value="EP 44 P9" />
+    <MESSAGE value="EP 44 P10" />
+    <MESSAGE value="EP 44 P11" />
+    <MESSAGE value="EP 44 P12" />
+    <MESSAGE value="EP 44 P13" />
+    <MESSAGE value="EP 44 P14" />
+    <option name="LAST_COMMIT_MESSAGE" value="EP 44 P14" />
+  </component>
+</project>

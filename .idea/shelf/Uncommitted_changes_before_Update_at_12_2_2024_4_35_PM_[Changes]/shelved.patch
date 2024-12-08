@@ -1,0 +1,31 @@
+Index: ecom/payment/templates/payment/checkout.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{% extends 'base.html' %}\r\n{% load static %}\r\n\r\n{% block content %}\r\n<!-- Header -->\r\n<header class=\"bg-dark py-5\">\r\n    <div class=\"container px-4 px-lg-5 my-5\">\r\n        <div class=\"text-center text-white\">\r\n            <h1 class=\"display-4 fw-bolder\">Checkout</h1>\r\n            <p class=\"lead fw-normal text-white-50 mb-0\">Review Your Order</p>\r\n        </div>\r\n    </div>\r\n</header>\r\n<br/>\r\n<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-md-6 offset-md-3\">\r\n            <div class=\"card\">\r\n                <div class=\"card-header\">\r\n                    Order Summary\r\n                </div>\r\n                <div class=\"card-body\">\r\n                    {% for product in cart_products %}\r\n                    {{ product.name }}\r\n                    {% if product.is_sale %}\r\n\r\n                    ${{ product.sale_price }}\r\n                    {% else %}\r\n                    ${{ product.price }}\r\n\r\n                    {% endif %}\r\n                    <br/>\r\n                    <small>Quantity:\r\n                        {% for key, value in quantities.items %}\r\n                        {% if key == product.id|slugify %}\r\n                        {{ value }}\r\n                        {% endif %}\r\n                        {% endfor %}<br/></small>\r\n                    <br/>\r\n                    {% endfor %}\r\n\r\n                    <hr class=\"divider\"/>\r\n                    <strong>Total: ${{ total }}</strong>\r\n                    <br/><br/>\r\n                    <a href=\"{% url 'cart_summary' %}\" class=\"btn btn-sm btn-outline-secondary\">Update Items</a>\r\n                </div>\r\n            </div>\r\n            <br/><br/>\r\n            <div class=\"card\">\r\n                <div class=\"card-header\">\r\n                    Shipping Info\r\n                </div>\r\n                <div class=\"card-body\">\r\n                    {{ s_form.as_p}}\r\n                </div>\r\n            </div>\r\n            <br/>\r\n                <center><a href=\"#\" class=\"btn btn-secondary\">To Billing</a></center>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n\r\n{% endblock %}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ecom/payment/templates/payment/checkout.html b/ecom/payment/templates/payment/checkout.html
+--- a/ecom/payment/templates/payment/checkout.html	(revision 925b45faa46a79d4d1fe7540c1ba394c972b6f1f)
++++ b/ecom/payment/templates/payment/checkout.html	(date 1733152939156)
+@@ -30,10 +30,10 @@
+ 
+                     {% endif %}
+                     <br/>
+-                    <small>Quantity:
++                    <small><strong>Quantity - </strong>
+                         {% for key, value in quantities.items %}
+                         {% if key == product.id|slugify %}
+-                        {{ value }}
++                        <strong>{{ value }}</strong>
+                         {% endif %}
+                         {% endfor %}<br/></small>
+                     <br/>
+@@ -56,6 +56,7 @@
+             </div>
+             <br/>
+                 <center><a href="#" class="btn btn-secondary">To Billing</a></center>
++                <br/>
+         </div>
+     </div>
+ </div>

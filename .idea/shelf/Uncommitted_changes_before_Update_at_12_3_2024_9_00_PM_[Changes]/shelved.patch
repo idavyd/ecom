@@ -1,0 +1,124 @@
+Index: ecom/store/templates/navbar.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\r\n    <div class=\"container px-4 px-lg-5\">\r\n        <a class=\"navbar-brand\" href=\"{% url 'home' %}\">TXP</a>\r\n        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\"\r\n                aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n            <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n            <ul class=\"navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4\">\r\n                <li class=\"nav-item\"><a class=\"nav-link active\" aria-current=\"page\" href=\"{% url 'home' %}\">Home</a>\r\n                </li>\r\n                <li class=\"nav-item\"><a class=\"nav-link active\" aria-current=\"page\" href=\"{% url 'search' %}\">Search</a>\r\n                </li>\r\n                <li class=\"nav-item\"><a class=\"nav-link\" href=\"{% url 'about' %}\">About</a></li>\r\n\r\n                <!-- Login / Logout -->\r\n                {% if user.is_authenticated %}\r\n                <li class=\"nav-item dropdown\">\r\n                    <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\"\r\n                       data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Profile</a>\r\n                    <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n                        <li><a class=\"dropdown-item\" href=\"{% url 'logout' %}\">Logout</a></li>\r\n                        <li><a class=\"dropdown-item\" href=\"{% url 'update_user' %}\">Update User</a></li>\r\n                        <li><a class=\"dropdown-item\" href=\"{% url 'update_info' %}\">Update Information</a></li>\r\n                    </ul>\r\n                </li>\r\n                {% else %}\r\n                <li class=\"nav-item\"><a class=\"nav-link\" href=\"{% url 'login' %}\">Login</a></li>\r\n                <li class=\"nav-item\"><a class=\"nav-link\" href=\"{% url 'register' %}\">Register</a></li>\r\n                {% endif %}\r\n\r\n                <li class=\"nav-item dropdown\">\r\n                    <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\"\r\n                       data-bs-toggle=\"dropdown\" aria-expanded=\"false\">Categories</a>\r\n                    <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n                        <li><a class=\"dropdown-item\" href=\"{% url 'category_summary' %}\">All Products</a></li>\r\n                        <li>\r\n                            <hr class=\"dropdown-divider\"/>\r\n                        </li>\r\n                        <li><a class=\"dropdown-item\" href=\"{% url 'category' 'Books' %}\">Books</a></li>\r\n                        <li><a class=\"dropdown-item\" href=\"{% url 'category' 'Electronics' %}\">Electronics</a></li>\r\n                        <li><a class=\"dropdown-item\" href=\"{% url 'category' 'Cars' %}\">Cars</a></li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n\r\n            <!-- Cart -->\r\n            <form class=\"d-flex\">\r\n                <a href=\"{% url 'cart_summary' %}\" class=\"btn btn-outline-dark\">\r\n                    <i class=\"bi-cart-fill me-1\"></i>\r\n                    Cart\r\n                    <span class=\"badge bg-dark text-white ms-1 rounded-pill\" id=\"cart_quantity\">{{ cart|length }}</span>\r\n                </a>\r\n            </form>\r\n        </div>\r\n    </div>\r\n</nav>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ecom/store/templates/navbar.html b/ecom/store/templates/navbar.html
+--- a/ecom/store/templates/navbar.html	(revision 58ac8c9f3fdb540927f6d2c34268fc633aef05e3)
++++ b/ecom/store/templates/navbar.html	(date 1733175534565)
+@@ -42,6 +42,10 @@
+                         <li><a class="dropdown-item" href="{% url 'category' 'Cars' %}">Cars</a></li>
+                     </ul>
+                 </li>
++                {% if user.is_authenticated and user.is_superuser %}
++                <li class="nav-item"><a class="nav-link" href="{% url 'shipped_dash' %}">Shipped Dash</a></li>
++                <li class="nav-item"><a class="nav-link" href="{% url 'not_shipped_dash' %}">UnShipped Dash</a></li>
++                {% endif %}
+             </ul>
+ 
+             <!-- Cart -->
+Index: ecom/payment/views.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.shortcuts import render\r\nfrom cart.cart import Cart\r\nfrom .forms import ShippingForm, PaymentForm\r\nfrom .models import ShippingAddress, Order, OrderItem\r\nfrom django.contrib.auth.models import User\r\nfrom django.contrib import messages\r\nfrom django.shortcuts import redirect, render\r\nfrom store.models import Product\r\n\r\n\r\ndef payment_success(request):\r\n    return render(request, 'payment/payment_success.html', {})\r\n\r\n\r\ndef checkout(request):\r\n    cart = Cart(request)\r\n    cart_products = cart.get_prods()\r\n    quantities = cart.get_quants()\r\n    total = cart.total()\r\n    if request.user.is_authenticated:\r\n        s_user = ShippingAddress.objects.get(user__id=request.user.id)\r\n        s_form = ShippingForm(request.POST or None, instance=s_user)\r\n        context = {'cart_products': cart_products,\r\n                   'quantities': quantities,\r\n                   'total': total,\r\n                   's_form': s_form\r\n                   }\r\n        return render(request, 'payment/checkout.html', context)\r\n    else:\r\n        s_form = ShippingForm(request.POST or None)\r\n        context = {'cart_products': cart_products,\r\n                   'quantities': quantities,\r\n                   'total': total,\r\n                   's_form': s_form\r\n                   }\r\n        return render(request, 'payment/checkout.html', context)\r\n\r\n\r\ndef billing_info(request):\r\n    if request.POST:\r\n        cart = Cart(request)\r\n        billing_form = PaymentForm()\r\n        my_shipping = request.POST\r\n        request.session['my_shipping'] = my_shipping\r\n        context = {'cart_products': cart.get_prods(),\r\n                   'quantities': cart.get_quants(),\r\n                   'total': cart.total(),\r\n                   's_info': request.POST,\r\n                   'billing_form': billing_form\r\n                   }\r\n        if request.user.is_authenticated:\r\n            return render(request, 'payment/billing_info.html', context)\r\n        else:\r\n            return render(request, 'payment/billing_info.html', context)\r\n\r\n    else:\r\n        print(request.META.get('HTTP_REFERER'))\r\n        messages.success(request, 'No no no can not do that')\r\n        return redirect('home')\r\n\r\n\r\ndef process_order(request):\r\n    if request.POST:\r\n        cart = Cart(request)\r\n        payment_form = PaymentForm(request.POST or None)\r\n        my_shipping = request.session.get('my_shipping')\r\n        shipping_address = (f\"{my_shipping['shipping_address1']}\\n\"\r\n                            f\"{my_shipping['shipping_address2']}\\n\"\r\n                            f\"{my_shipping['shipping_city']}\\n\"\r\n                            f\"{my_shipping['shipping_state']}\\n\"\r\n                            f\"{my_shipping['shipping_zipcode']}\\n\"\r\n                            f\"{my_shipping['shipping_country']}\\n\")\r\n\r\n        if request.user.is_authenticated:\r\n            new_order = Order(user=request.user,\r\n                                 full_name=my_shipping['shipping_full_name'],\r\n                                 email=my_shipping['shipping_email'],\r\n                                 amount_paid=cart.total(),\r\n                                 shipping_address=shipping_address)\r\n            new_order.save()\r\n            order_id = new_order.pk\r\n            for product in cart.get_prods():\r\n                product_id = product.id\r\n                if product.is_sale:\r\n                    price = product.sale_price\r\n                else:\r\n                    price = product.price\r\n                for key, value in cart.get_quants().items():\r\n                    if int(key) == product.id:\r\n                        quantity = value\r\n                        create_order_item = OrderItem(order_id=order_id,\r\n                                                      product_id=product_id,\r\n                                                      user=request.user,\r\n                                                      quantity=quantity,\r\n                                                      price=price)\r\n                        create_order_item.save()\r\n            cart.clear()\r\n            messages.success(request, 'Order Placed!')\r\n            return redirect('home')\r\n        else:\r\n            new_order = Order(\r\n                                 full_name=my_shipping['shipping_full_name'],\r\n                                 email=my_shipping[\"shipping_email\"],\r\n                                 amount_paid=cart.total(),\r\n                                 shipping_address=shipping_address)\r\n            new_order.save()\r\n            order_id = new_order.pk\r\n\r\n            for product in cart.get_prods():\r\n                product_id = product.id\r\n                if product.is_sale:\r\n                    price = product.sale_price\r\n                else:\r\n                    price = product.price\r\n\r\n                for key, value in cart.get_quants().items():\r\n                    if int(key) == product.id:\r\n                        create_order_item = OrderItem(order_id=order_id,\r\n                                                      product_id=product_id,\r\n                                                      quantity=value,\r\n                                                      price=price)\r\n                        create_order_item.save()\r\n            cart.clear()\r\n            messages.success(request, 'Order Placed!')\r\n            return redirect('home')\r\n    else:\r\n        messages.success(request, 'Access Denied')\r\n        return redirect('home')\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ecom/payment/views.py b/ecom/payment/views.py
+--- a/ecom/payment/views.py	(revision 58ac8c9f3fdb540927f6d2c34268fc633aef05e3)
++++ b/ecom/payment/views.py	(date 1733175381221)
+@@ -128,3 +128,17 @@
+         return redirect('home')
+ 
+ 
++def shipped_dash(request):
++    if request.user.is_authenticated and request.user.is_superuser:
++        return render(request, 'payment/shipped_dash.html', {})
++    else:
++        messages.success(request, 'Access Denied')
++        return redirect('home')
++
++
++def not_shipped_dash(request):
++    if request.user.is_authenticated and request.user.is_superuser:
++        return render(request, 'payment/not_shipped_dash.html', {})
++    else:
++        messages.success(request, 'Access Denied')
++        return redirect('home')
+Index: ecom/payment/templates/payment/not_shipped_dash.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ecom/payment/templates/payment/not_shipped_dash.html b/ecom/payment/templates/payment/not_shipped_dash.html
+new file mode 100644
+--- /dev/null	(date 1733174976010)
++++ b/ecom/payment/templates/payment/not_shipped_dash.html	(date 1733174976010)
+@@ -0,0 +1,16 @@
++{% extends 'base.html' %}
++
++{% block content %}
++
++        <div class="container">
++            <div class="row">
++                <center>
++                    <div class="col-8">
++                        <br/><br/>
++                        <h3>Unshipped Items</h3>
++                    </div>
++
++                </center>
++            </div>
++        </div>
++{% endblock %}
+\ No newline at end of file
+Index: ecom/payment/templates/payment/shipped_dash.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ecom/payment/templates/payment/shipped_dash.html b/ecom/payment/templates/payment/shipped_dash.html
+new file mode 100644
+--- /dev/null	(date 1733174939330)
++++ b/ecom/payment/templates/payment/shipped_dash.html	(date 1733174939330)
+@@ -0,0 +1,16 @@
++{% extends 'base.html' %}
++
++{% block content %}
++
++        <div class="container">
++            <div class="row">
++                <center>
++                    <div class="col-8">
++                        <br/><br/>
++                        <h3>Shipper Items</h3>
++                    </div>
++
++                </center>
++            </div>
++        </div>
++{% endblock %}
+\ No newline at end of file
+Index: ecom/payment/urls.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from django.contrib import admin\r\nfrom django.urls import path, include\r\nfrom django.conf.urls.static import static\r\nfrom . import views\r\n\r\nurlpatterns = [\r\n    path('payment_success', views.payment_success, name='payment_success'),\r\n    path('checkout', views.checkout, name='checkout'),\r\n    path('billing_info', views.billing_info, name='billing_info'),\r\n    path('process_order', views.process_order, name='process_order')\r\n\r\n]
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ecom/payment/urls.py b/ecom/payment/urls.py
+--- a/ecom/payment/urls.py	(revision 58ac8c9f3fdb540927f6d2c34268fc633aef05e3)
++++ b/ecom/payment/urls.py	(date 1733174684199)
+@@ -7,6 +7,8 @@
+     path('payment_success', views.payment_success, name='payment_success'),
+     path('checkout', views.checkout, name='checkout'),
+     path('billing_info', views.billing_info, name='billing_info'),
+-    path('process_order', views.process_order, name='process_order')
++    path('process_order', views.process_order, name='process_order'),
++    path('shipped_dash', views.shipped_dash, name='shipped_dash'),
++    path('not_shipped_dash', views.not_shipped_dash, name='not_shipped_dash')
+ 
+ ]
+\ No newline at end of file
