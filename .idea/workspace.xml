@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fc743b6-d872-4306-ad33-1c3280e9426c" name="Changes" comment="EP 44 P14">
-      <change beforePath="$PROJECT_DIR$/ecom/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/ecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/ecom/settings.py" afterDir="false" />
+    <list default="true" id="4fc743b6-d872-4306-ad33-1c3280e9426c" name="Changes" comment="EP 44 P16">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +50,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\digor\PycharmProjects\ecom\ecom" />
       <recent name="C:\Users\digor\PycharmProjects\ecom" />
+      <recent name="C:\Users\digor\PycharmProjects\ecom\ecom" />
       <recent name="C:\Users\digor\PycharmProjects\ecom\ecom\payment\templates\payment" />
     </key>
   </component>
@@ -64,30 +63,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731267825052</updated>
-    </task>
-    <task id="LOCAL-00005" summary="ECOM 11/11 episode #2">
-      <option name="closed" value="true" />
-      <created>1731304190745</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1731304190745</updated>
-    </task>
-    <task id="LOCAL-00006" summary="EP 7 11/12 morning session">
-      <option name="closed" value="true" />
-      <created>1731390796694</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1731390796694</updated>
-    </task>
-    <task id="LOCAL-00007" summary="EP 9 13/12 morning session">
-      <option name="closed" value="true" />
-      <created>1731482977178</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1731482977178</updated>
     </task>
     <task id="LOCAL-00008" summary="EP 12 14/11 morning session">
       <option name="closed" value="true" />
@@ -457,7 +432,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733682017331</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="EP 44 P15">
+      <option name="closed" value="true" />
+      <created>1733682684850</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1733682684850</updated>
+    </task>
+    <task id="LOCAL-00055" summary="EP 44 P15">
+      <option name="closed" value="true" />
+      <created>1733682789151</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1733682789151</updated>
+    </task>
+    <task id="LOCAL-00056" summary="EP 44 P16">
+      <option name="closed" value="true" />
+      <created>1733683638489</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1733683638489</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -475,8 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="EP 26 Search function 26/11 home" />
-    <MESSAGE value="EP 27 Cart finished  27/11 home" />
     <MESSAGE value="EP 29 new app  27/11 home" />
     <MESSAGE value="EP 34 Billing info  02/12 home" />
     <MESSAGE value="EP 35 Generate Orders  02/12 home" />
@@ -500,6 +497,8 @@
     <MESSAGE value="EP 44 P12" />
     <MESSAGE value="EP 44 P13" />
     <MESSAGE value="EP 44 P14" />
-    <option name="LAST_COMMIT_MESSAGE" value="EP 44 P14" />
+    <MESSAGE value="EP 44 P15" />
+    <MESSAGE value="EP 44 P16" />
+    <option name="LAST_COMMIT_MESSAGE" value="EP 44 P16" />
   </component>
 </project>
