@@ -15,7 +15,6 @@ SECRET_KEY = 'django-insecure-w+382ahc&%=c%)6m-%2vc$if!(0h6aqypv37agqyr@0x40)8d2
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -79,9 +78,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': '',
-        'HOST': 'postgres.railway.internal',
-        'PORT': '5432',
+        'PASSWORD': os.environ.get('DB_PASSWORD_YO'),
+        'HOST': 'junction.proxy.rlwy.net',
+        'PORT': '13406',
 
 
     }
