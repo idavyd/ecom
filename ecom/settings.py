@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-w+382ahc&%=c%)6m-%2vc$if!(0h6aqypv37agqyr@0x40)8d2
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['ecom-production-dfb1.up.railway.app']
+ALLOWED_HOSTS = ['ecom-production-dfb1.up.railway.app', '127.0.0.1', 'localhost']
 CSRF_TRUSTED_ORIGINS = ['https://ecom-production-dfb1.up.railway.app']
 
 
@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'cart',
     'payment',
     'whitenoise.runserver_nostatic',
+    'paypal.standard.ipn',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Add paypal settings
+PAYPAL_TEST = True
+PAYPAL_RECEIVER_EMAIL = 'businessdjango@test.com'
+
+

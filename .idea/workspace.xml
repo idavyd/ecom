@@ -4,243 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4fc743b6-d872-4306-ad33-1c3280e9426c" name="Changes" comment="EP 44 P17">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4fc743b6-d872-4306-ad33-1c3280e9426c" name="Changes" comment="EP 44 P20">
+      <change afterPath="$PROJECT_DIR$/payment/templates/payment/payment_failed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/context_processors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/decoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/decoder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/templates/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/templates/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/templates/cart_summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/cart/templates/cart_summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/ecom/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/ecom/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/ecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/ecom/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/ecom/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/categories/CAR.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/categories/CAR.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/categories/CAR_XVQJ6Yl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/categories/CAR_XVQJ6Yl.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/categories/book.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/categories/book.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/categories/book_hR61xKl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/categories/book_hR61xKl.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/categories/books.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/categories/books.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/categories/elect.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/categories/elect.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/categories/elect_BDYJKtx.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/categories/elect_BDYJKtx.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/categories/electronics.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/categories/electronics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/Hilversum_Netherlands_Drone_4K_2024.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/Hilversum_Netherlands_Drone_4K_2024.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/Hilversum_Netherlands_Drone_4K_2024_Z28aQaa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/Hilversum_Netherlands_Drone_4K_2024_Z28aQaa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/b8c5c3c0-856f-4a97-87ea-bdc8f6540223.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/b8c5c3c0-856f-4a97-87ea-bdc8f6540223.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/book.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/book.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/curvv-exterior-right-front-three-quarter.webp" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/curvv-exterior-right-front-three-quarter.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/download.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/download.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/download_1.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/download_1.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/ext_G8G_deg01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/ext_G8G_deg01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/ford-mustang-l-01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/ford-mustang-l-01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/images.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/images.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/iphone-6s-space-gray.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/iphone-6s-space-gray.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/tesla.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/tesla.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/wanderlust.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/wanderlust.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/media/uploads/products/yannæsthetic.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/products/yannæsthetic.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/migrations/0002_rename_address1_shippingaddress_shipping_address1_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/migrations/0002_rename_address1_shippingaddress_shipping_address1_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/migrations/0003_alter_shippingaddress_shipping_address2_order_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/migrations/0003_alter_shippingaddress_shipping_address2_order_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/migrations/0004_rename_address1_order_shipping_address.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/migrations/0004_rename_address1_order_shipping_address.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/migrations/0005_order_is_shipped.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/migrations/0005_order_is_shipped.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/migrations/0006_order_date_shipped.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/migrations/0006_order_date_shipped.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/payment/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/payment/billing_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/billing_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/payment/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/payment/not_shipped_dash.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/not_shipped_dash.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/payment/orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/orders.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/payment/payment_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/payment_success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/payment/process_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/process_order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/templates/payment/shipped_dash.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/shipped_dash.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/payment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/static/assets/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/static/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/autocomplete.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/autocomplete.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/changelists.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/changelists.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/dark_mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/dark_mode.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/forms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/nav_sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/nav_sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/responsive_rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/responsive_rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/unusable_password_field.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/unusable_password_field.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.md" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/vendor/select2/LICENSE-SELECT2.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/vendor/select2/select2.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/vendor/select2/select2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/vendor/select2/select2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/vendor/select2/select2.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/css/widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/css/widgets.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/calendar-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/calendar-icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/gis/move_vertex_off.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_off.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/gis/move_vertex_on.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/gis/move_vertex_on.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-addlink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-addlink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-alert.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-alert.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-calendar.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-calendar.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-changelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-changelink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-clock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-clock.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-deletelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-deletelink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-hidelink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-hidelink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-no.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-no.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-unknown-alt.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown-alt.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-unknown.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-unknown.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-viewlink.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-viewlink.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/icon-yes.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/icon-yes.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/inline-delete.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/inline-delete.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/selector-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/selector-icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/sorting-icons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/sorting-icons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/tooltag-add.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-add.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/img/tooltag-arrowright.svg" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/img/tooltag-arrowright.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/SelectBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/SelectBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/SelectFilter2.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/SelectFilter2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/autocomplete.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/autocomplete.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/cancel.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/cancel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/change_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/change_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/inlines.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/inlines.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/jquery.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/jquery.init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/nav_sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/nav_sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/popup_response.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/popup_response.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/prepopulate.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/prepopulate_init.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/prepopulate_init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/unusable_password_field.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/unusable_password_field.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/urlify.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/urlify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/jquery/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/LICENSE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/af.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/af.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/az.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/az.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/bg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/bn.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/bn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/bs.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/bs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ca.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/cs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/da.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/da.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/de.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/de.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/dsb.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/dsb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/el.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/el.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/et.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/et.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/eu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/fa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/fi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/fr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/gl.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/gl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/he.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/hi.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/hi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/hr.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/hr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/hsb.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/hsb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/hu.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/hu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/hy.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/hy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/id.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/id.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/is.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/is.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/it.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/it.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ja.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ka.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ka.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/km.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/km.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ko.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/lt.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/lt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/lv.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/lv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/mk.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/mk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ms.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/nb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ne.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ne.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/nl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/pl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ps.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/pt-BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/pt-BR.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/pt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ro.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/ru.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/sk.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/sl.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/sq.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/sr.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/sv.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/sv.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/th.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/th.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/tk.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/tk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/tr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/uk.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/uk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/vi.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/vi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/zh-CN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/i18n/zh-TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/i18n/zh-TW.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/select2.full.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/select2.full.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/select2/select2.full.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/select2/select2.full.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/assets/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/assets/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/staticfiles/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/0002_alter_category_options_category_name_and_more.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0002_alter_category_options_category_name_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/0003_product_description_product_name_product_price.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0003_product_description_product_name_product_price.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/0004_product_is_sale_product_sale_price.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0004_product_is_sale_product_sale_price.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/0005_category_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0005_category_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/0006_profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0006_profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/0007_alter_profile_date_modified.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0007_alter_profile_date_modified.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/0008_profile_old_cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/0008_profile_old_cart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/about_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/about_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/category_summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/category_summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/home_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/home_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/login_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/login_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/product_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/product_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/register_view.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/register_view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/update_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/update_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/update_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/update_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templates/update_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/store/templates/update_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templatetags/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/templatetags/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/templatetags/navbar_tags.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/templatetags/navbar_tags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecom/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecom/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecom/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/templates/payment/billing_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/payment/templates/payment/billing_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/payment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,30 +70,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731267825052</updated>
-    </task>
-    <task id="LOCAL-00009" summary="EP 14 18/11 morning session">
-      <option name="closed" value="true" />
-      <created>1731909105311</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1731909105311</updated>
-    </task>
-    <task id="LOCAL-00010" summary="EP 15 19/11 morning session">
-      <option name="closed" value="true" />
-      <created>1731994969000</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1731994969001</updated>
-    </task>
-    <task id="LOCAL-00011" summary="EP 15 20/11 morning session">
-      <option name="closed" value="true" />
-      <created>1732086397717</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1732086397717</updated>
     </task>
     <task id="LOCAL-00012" summary="EP 16 21/11 morning session">
       <option name="closed" value="true" />
@@ -691,7 +439,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733684041491</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="EP 44 P18">
+      <option name="closed" value="true" />
+      <created>1733684938532</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1733684938532</updated>
+    </task>
+    <task id="LOCAL-00059" summary="EP 44 P19">
+      <option name="closed" value="true" />
+      <created>1733685515229</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1733685515230</updated>
+    </task>
+    <task id="LOCAL-00060" summary="EP 44 P20">
+      <option name="closed" value="true" />
+      <created>1733685844692</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1733685844692</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -709,9 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="EP 34 Billing info  02/12 home" />
-    <MESSAGE value="EP 35 Generate Orders  02/12 home" />
-    <MESSAGE value="EP 36 Attach Order Items  02/12 home" />
     <MESSAGE value="EP 37 Order Item Inlines  02/12 home" />
     <MESSAGE value="EP 38 Shipping Date  02/12 home" />
     <MESSAGE value="EP 40 Dashboard Item Pages  04/12 home" />
@@ -734,6 +503,9 @@
     <MESSAGE value="EP 44 P15" />
     <MESSAGE value="EP 44 P16" />
     <MESSAGE value="EP 44 P17" />
-    <option name="LAST_COMMIT_MESSAGE" value="EP 44 P17" />
+    <MESSAGE value="EP 44 P18" />
+    <MESSAGE value="EP 44 P19" />
+    <MESSAGE value="EP 44 P20" />
+    <option name="LAST_COMMIT_MESSAGE" value="EP 44 P20" />
   </component>
 </project>

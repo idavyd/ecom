@@ -7,11 +7,18 @@ from django.contrib import messages
 from django.shortcuts import redirect, render
 from store.models import Product, Profile
 import datetime as dt
+from django.urls import reverse
+from django.conf import settings
+from paypal.standard.forms import PayPalPaymentsForm
+import uuid #unique id
 
 
 
 def payment_success(request):
     return render(request, 'payment/payment_success.html', {})
+
+def payment_failed(request):
+    return render(request, 'payment/payment_failed.html', {})
 
 
 def checkout(request):
@@ -44,11 +51,28 @@ def billing_info(request):
         billing_form = PaymentForm()
         my_shipping = request.POST
         request.session['my_shipping'] = my_shipping
+
+
+        host = request.get_host()
+        paypal_dict = {
+            'business': settings.PAYPAL_RECEIVER_EMAIL,
+            'amount_paid': cart.total(),
+            'item_name': 'Product Order',
+            'no_shipping': '2',
+            'invoice': str(uuid.uuid4()),
+            'currency': 'USD',
+            'notify_url': 'https://{}{}'.format(host, reverse('paypal-ipn')),
+            'return_url': 'https://{}{}'.format(host, reverse('payment-success')),
+            'cancel_url': 'https://{}{}'.format(host, reverse('payment-failed')),
+        }
+        paypal_form = PayPalPaymentsForm(initial=paypal_dict)
+
         context = {'cart_products': cart.get_prods(),
                    'quantities': cart.get_quants(),
                    'total': cart.total(),
                    's_info': request.POST,
-                   'billing_form': billing_form
+                   'billing_form': billing_form,
+                   'paypal_form': paypal_form
                    }
         if request.user.is_authenticated:
             return render(request, 'payment/billing_info.html', context)

@@ -107,7 +107,7 @@ def update_user(request):
         if form.is_valid():
             form.save()
             login(request, request.user)
-            messages.success(request, 'Сосать хуй!')
+            messages.success(request, 'Logged in')
             return redirect('home')
         return render(request, 'update_user.html', {'form': form})
     else:
