@@ -10,12 +10,12 @@ import datetime as dt
 from django.urls import reverse
 from django.conf import settings
 from paypal.standard.forms import PayPalPaymentsForm
-import uuid #unique id
-
+import uuid
 
 
 def payment_success(request):
     return render(request, 'payment/payment_success.html', {})
+
 
 def payment_failed(request):
     return render(request, 'payment/payment_failed.html', {})
@@ -51,8 +51,6 @@ def billing_info(request):
         billing_form = PaymentForm()
         my_shipping = request.POST
         request.session['my_shipping'] = my_shipping
-
-
         host = request.get_host()
         paypal_dict = {
             'business': settings.PAYPAL_RECEIVER_EMAIL,
@@ -62,8 +60,8 @@ def billing_info(request):
             'invoice': str(uuid.uuid4()),
             'currency': 'USD',
             'notify_url': 'https://{}{}'.format(host, reverse('paypal-ipn')),
-            'return_url': 'https://{}{}'.format(host, reverse('payment-success')),
-            'cancel_url': 'https://{}{}'.format(host, reverse('payment-failed')),
+            'return_url': 'https://{}{}'.format(host, reverse('payment_success')),
+            'cancel_return': 'https://{}{}'.format(host, reverse('payment_failed')),
         }
         paypal_form = PayPalPaymentsForm(initial=paypal_dict)
 
